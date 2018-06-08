@@ -1,0 +1,108 @@
+//Grid
+$gutter-width: 20px;
+$gutter-width-xs: 30px;
+
+//Colors
+$green: #00F8D0;
+$green-dark: #00EBC5;
+$white: #fff;
+$blue-dark: #004A56;
+$blue: #2D96E4;
+$gray: #6F6F6E;
+$cream: #F8F8F8;
+$dark: #020202;
+$color-first: #095b68;
+$bright-turquoise: #00FFD6;
+//Color for product menu
+$product-color: #00ebc5;
+//color for webform's border
+$border: rgb(169, 169, 169);
+$webform-border: #a4aeb3;
+//color for "Safety" section on about page.
+$lightcyan: #e5fefa;
+//background color for "Our values Jobs Offices"
+//section on about-page.
+$beige: beige;
+//footer and blog page bgc
+$lightgrey: #f8f8f8;
+//header color for prices page
+$head-clr-prices: #003e48;
+//backgroun for main page's blocks
+$lightgrey2:  #f1f1f1;
+//font color for section above footer on main page
+$color-location: #4a4a4a;
+//color faq
+$color-faq: #003841;
+
+//Text color
+$text-default: $blue-dark;
+$text-light: $gray;
+$text-dark: $dark;
+$text-white: $white;
+$link: $blue;
+$text-btn: $white;
+
+//Background-color
+$btn-light-bg: $green;
+$btn-dark-bg: $blue-dark;
+$callform-bg: $blue-dark;
+$footer-bg: $cream;
+$form-bg: $white;
+$header-invert: $white;
+
+//Font-size
+$header-title-mobile: 28px;
+$header-title-desktop: 48px;
+
+$ancor-text-about: 13px;
+
+$h2-mobile: 28px;
+$h2-desktop: 38px;
+$h2-contact-page: 34px;
+
+$body-mobile: 16px;
+$body-desktop: 19px;
+$text-small: 14px;
+$text-mobile-footer: 12px;
+$text-first: 24px;
+
+$lead-mobile: 18px;
+$lead-desktop: 28px;
+$lead: 26px;
+
+$icons-mobile: 29px;
+$icons-desktop: 32px;
+
+$faq-question-mobile: 19px;
+$faq-question-desktop: 22px;
+
+
+$menu-mobile: 22px;
+$menu-desktop: 18px;
+
+//size of 'staffcloud in numbers' numbers
+$staff-numbers-size: 82px;
+$staff-title-size: 20px;
+
+//Breakpoints
+$screen-xxs:                 320px !default;
+// Extra small screen / phone
+$screen-xs:                  480px !default;
+// Small screen / tablet
+$screen-640:                 640px !default;
+//custom
+$screen-sm:                  768px !default;
+// Medium screen / desktop
+$screen-md:                  992px !default;
+//Custom medium screen desktop
+$screen-md2:                1024px !default;
+// Large screen / wide desktop
+$screen-lg:                 1200px !default;
+// Extra Large screen / wide desktop
+$screen-xl:                 1366px !default;
+// 1500px
+$screen-1500:               1500px !default;
+// Wide screen / extra wide desktop
+$screen-wd:                 1600px !default;
+// Full HD screen / full hd desktop
+$screen-hd:                 1920px !default;

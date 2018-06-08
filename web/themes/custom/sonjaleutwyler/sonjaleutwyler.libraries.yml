@@ -1,0 +1,57 @@
+global-styling:
+  css:
+    component:
+      css/style.css: {}
+  js:
+    js/menu.js: {}
+
+empty-pages:
+  css:
+    theme:
+      css/page404.css: {}
+
+developer-page:
+  css:
+    theme:
+      css/developer-page.css: {}
+
+faq-accordion:
+  js:
+    js/faq-accordion.js: {}
+
+pdf-form:
+  js:
+    js/pdf-form.js: {}
+
+about-page-smooth-scroll:
+  js:
+    js/about-page-smooth-scroll.js: {}
+    js/about-page-morebutton.js: {}
+    js/about-page-conditions.js: {}
+
+about-page-slider:
+  js:
+    js/libs/flickity.pkgd.min.js: {}
+    js/about-page-slider.js: {}
+
+about-page-numbers:
+  js:
+    js/about-page-numbers.js: {}
+
+milestones-history:
+  js:
+    js/milestones-history.js: {}
+
+branch-menu:
+  js:
+    js/branch-menu.js: {}
+
+faq-page-filter:
+  js:
+    js/faq-page-filter.js: {}
+
+addons-accordion:
+  js:
+    js/libs/jquery.match-height.min.js: {}
+    js/addons-accordion.js: {}
+    js/prices-calculator.js: {}

@@ -1,0 +1,74 @@
+/*
+ *  View component
+ * --------------------------------------------------*/
+
+// Variables
+// -------------------------
+
+
+// Mixins
+// -------------------------
+
+// General settings
+// -------------------------
+
+.view-agenturen {
+ .view-content {
+  text-align: center;
+
+  .views-row {
+   display: inline-block;
+   padding-bottom: 30px;
+   width: 70%;
+   vertical-align: bottom;
+   &:first-child {
+    img {
+     width: 50%;
+    }
+   }
+   @media @normal {
+    margin-left: -4px;
+    width: 48%;
+    &:first-child {
+     margin-right: 25px;
+    }
+   }
+
+   .field-content{
+
+    .agentur {
+     display: block;
+     padding: 25px;
+     #pxl-mixins.resp-padding-bottom(20px);
+     background-color: white;
+     text-align: center;
+     border-radius: 5px;
+     #pxl-mixins.transition(background-color 0.1s ease);
+     @media @normal {
+      &:hover {
+       background-color: lighten(@pxl-color-blue-1, 30%);
+      }
+     }
+     .img-wrapper {
+      #pxl-mixins.resp-margin-bottom(20px);
+
+      @media @normal {
+       height: 120px;
+      }
+      img {
+       margin-left: auto;
+       margin-right: auto;
+       mix-blend-mode: multiply;
+       @media @normal {
+        #pxl-mixins.align-vertically(50%);
+       }
+      }
+     }
+
+     .agentur-name {
+     }
+    }
+   }
+  }
+ }
+}

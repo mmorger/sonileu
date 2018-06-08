@@ -1,0 +1,42 @@
+.btn-custom {
+  display: inline-block;
+  min-width: 230px;
+  text-align: center;
+  background-color: $btn-dark-bg;
+  color: $text-btn;
+  text-decoration: none;
+  padding: 0.9em 1em 0.7em;
+  font-size: $body-mobile;
+  border-radius: 0;
+  border: none;
+  line-height: normal;
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: none;
+  }
+  @include media ($screen-sm) {
+    font-size: $lead-mobile;
+    padding: 17px 30px 13px;
+  }
+  @include media ($screen-md) {
+    font-size: $body-desktop;
+  }
+  &:hover {
+    color: $text-btn;
+    text-decoration: none;
+  }
+  &.btn-light {
+    background-color: #00ebc5 !important;
+  }
+  &.btn-primary {
+    background-color: $link;
+  }
+  &.btn-white {
+    background-color: $white;
+    color: #3fc2ad;
+    &:hover {
+      color: #3fc2ad;
+    }
+  }
+}

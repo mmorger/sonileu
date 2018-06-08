@@ -1,0 +1,158 @@
+<div class="price-calculator">
+    <form id="price-calc" action="">
+        <div class="wrapper-prices">
+            <div class="left-block">
+                <div class="packet-list">
+                    {% for plan in plans %}
+                        <div class="packet-item">
+                            <input
+                                {% if plan.tid == 20 %}
+                                    checked
+                                {% endif %}
+                                id="packet_{{ plan.tid }}"
+                                type="radio"
+                                name="packet"
+                                tid = {{ plan.tid }}
+                                value="{{ plan.price }}"
+                                modules_tids[]="{{ plan.field_modules }}">
+                            <label for="packet_{{ plan.tid }}">
+                                <span class="radio-icon"></span>
+                                <span class="title">{{ plan.name|trans }}</span>
+                                <span class="cost"><span class="currency">CHF</span><b>{{ plan.field_plan_price }}</b></span>
+                                <span class="pro">{{ 'per user/month'|trans }}</span>
+                            </label>
+                        </div>
+                    {% endfor %}
+                </div>
+                <div class="payment-terms">
+                    <h3 class="title-section">{{ 'Payment Terms'|trans }}</h3>
+                    <div class="terms-list">
+                        {% for payment in payments %}
+                            <div class="term-item">
+                                <input id="packet_term_{{ payment.name|lower }}"
+                                        {% if loop.last %}
+                                            checked
+                                        {% endif %}
+                                       type="radio"
+                                       name="terms"
+                                       value="{{ payment.name|lower }}">
+                                <label for="packet_term_{{ payment.name|lower }}">{{ payment.name|trans }}</label>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            <div class="right-block">
+                {% for plan in plans %}
+                    <h2 class="title-packet packet-tid-{{ plan.tid }}" tid="{{ plan.tid }}">{{ plan.name|trans }}</h2>
+                    <div class="packet-description packet-tid-{{ plan.tid }}" tid="{{ plan.tid }}">
+                        <div class="{{ plan.name|lower }}-des descriptions">
+                            {{ plan.description|striptags|trans }}
+                        </div>
+                    </div>
+                {% endfor %}
+                <div class="packet-modules">
+                    <h3 class="title-section">{{ configs.modules_section_title|trans }}</h3>
+                    <div class="modules-list">
+                        {% for module in modules %}
+                            <div class="module-item" module_tid="{{ module.tid }}">
+                                <div class="has-tooltip">
+                                    <span class="icons"></span>
+                                    <span>{{ module.name|trans }}</span>
+                                    <div class="custom-tooltip"><span>{{ module.description|striptags|trans }}</span></div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="packet-addons">
+                    <h3 class="title-section">{{ configs.add_ons_section_title|trans }}</h3>
+                    <p class="addon-description">
+                        {{ configs.add_ons_description|trans }}
+                        <a class="toogle-section" href=""></a>
+                    </p>
+                    <div class="addons-list">
+                        {% for add_on in add_ons %}
+                            <div class="addon-item">
+                                <input id="packet_addon_{{ add_on.tid }}"
+                                       type="checkbox"
+                                       name="addons"
+                                       value="{{ add_on.price }}">
+                                <label for="packet_addon_{{ add_on.tid }}">
+                                    <span class="title">{{ add_on.name|trans }}</span>
+                                    <span class="description">{{ add_on.description|striptags|trans }}</span>
+                                    <span class="cost"><span class="currency">CHF</span><b>{{ add_on.field_add_ons_price }}</b></span>
+                                    <span class="pro">{{ 'per user/month'|trans }}</span>
+                                </label>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="volumina">
+                    <h3 class="title-section"> {{ configs.values_section_title|trans }}</h3>
+                    <div class="wrapper-volumina">
+                        <div class="volumina-item clearfix">
+                            <label for="employees">{{ configs.active_employees_label|trans}}
+                                <div class="custom-tooltip">
+                                    <span>
+                                        {{ configs.employees_popup|trans }}
+                                    </span>
+                                </div>
+                            </label>
+                            <div class="select-wrapper">
+                                <select class="form-select required form-control"
+                                        name="employees"
+                                        id="employees">
+                                    {% for employees in configs.active_employees_number %}
+                                        <option name="employees" id="{{ employees }}" value="{{ employees }}">{{ employees }}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                        </div>
+                        <div class="volumina-item clearfix">
+                            <label for="planned-hours">
+                                {{ configs.planned_hours_label|trans }}
+                                <div class="custom-tooltip">
+                                    <span>
+                                        {{ configs.planned_hours_popup|trans }}
+                                    </span>
+                                </div>
+                            </label>
+                            <div class="select-wrapper">
+                                <select class="form-select required form-control" name="planned-hours" id="planned-hours">
+                                    {% for hours in configs.planned_hours_number %}
+                                        <option name="hours" id="{{ hours }}" value="{{ hours }}">{{ hours }}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="user-count">
+                    <h3 class="title-section">{{ configs.user_section_title|trans }}</h3>
+                    <div class="user-count-wrapper">
+                        <div class="count-item">
+                            <label for="active-users">{{ configs.user_label|trans}}</label>
+                            <div class="select-wrapper">
+                                <select class="form-select required form-control"
+                                        name="active-users"
+                                        id="active-users">
+                                    {% for users in configs.users_number_value %}
+                                        <option name="employees" id="{{ users }}" value="{{ users }}">{{ users }}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="total">
+                    <div class="top-section">
+                        <span class="title">{{ configs.annual_costs_section_title|trans  }}</span>
+                        <span class="total-cost"><span class="currency">CHF</span><b>-</b></span>
+                    </div>
+                    <p class="description">{{ configs.annual_costs_description|trans }}</p>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

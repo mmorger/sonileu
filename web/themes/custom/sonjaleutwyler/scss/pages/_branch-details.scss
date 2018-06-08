@@ -1,0 +1,34 @@
+.path-taxonomy {
+  > .footer {
+    margin-top: 0;
+  }
+  .field--name-field-branch-icon {
+    padding-top: 50px;
+    padding-bottom: 25px;
+    text-align: center;
+    img {
+      display: inline-block;
+      width: 60px;
+    }
+  }
+  .view-contextual-features {
+    .view-header {
+      color: $text-default;
+      text-align: center;
+      font-size: $lead-mobile;
+      margin-bottom: 20px;
+      @include media ($screen-sm) {
+        font-size: $lead;
+        margin-bottom: 80px;
+      }
+    }
+  }
+  .view-contextual-product-modules {
+    .view-content {
+      justify-content: center;
+    }
+  }
+  .feed-icons {
+    display: none;
+  }
+}

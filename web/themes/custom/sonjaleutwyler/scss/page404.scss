@@ -1,0 +1,125 @@
+@import 'variables';
+@import 'mixins/mixins';
+//@import "fonts";
+
+html {
+  height: 100%;
+}
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  #downScroll {
+    display: none !important;
+  }
+
+  #block-calltoaction {
+    display: none;
+  }
+
+  .views-element-container {
+    background-color: $blue;
+    margin-bottom: 0;
+    .field--name-field-desktop-image img {
+      display: none;
+    }
+  }
+  .main-container {
+    flex: 1 0 auto;
+    .header-background {
+      height: 0;
+      min-height: 0;
+    }
+    .region-content {
+      position: relative;
+      text-align: center;
+      .page-header {
+        @include absolute-horizontal-center;
+        border-bottom: none;
+        overflow: visible;
+        z-index: 1;
+        top: 50%;
+        height:auto;
+        transform: translate(-50%,-50%);
+      }
+      .views-field-nothing {
+        span {
+          @include absolute-horizontal-center;
+          bottom: -60px;
+        }
+      }
+    }
+
+  }
+  footer {
+    flex-shrink: 0;
+  }
+  .view-id-page_not_found,
+  .view-access-denied-page {
+    max-height: 150px;
+    min-height: auto;
+    height: 150px;
+    @include media($screen-sm) {
+      max-height: 300px;
+      min-height: auto;
+      height: 300px;
+    }
+    .field--name-field-mobile-image {
+      max-height: 150px;
+      min-height: auto;
+      height: 150px;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      @include media($screen-sm) {
+        display: none;
+      }
+      .field--label {
+        display: none;
+      }
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        object-fit: cover;
+        max-height: 150px;
+        min-height: auto;
+        height: 150px;
+      }
+    }
+    .field--name-field-desktop-image {
+      display: none;
+      @include media ($screen-sm) {
+        display: block;
+        max-height: 300px;
+        min-height: auto;
+        height: 300px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+      .field--label {
+        display: none;
+      }
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        object-fit: cover;
+        min-height: auto;
+        height: 150px;
+        @include media ($screen-sm) {
+          min-height: 550px;
+          max-height: 700px;
+          min-height: auto;
+          height: 300px;
+        }
+      }
+    }
+  }
+  .footer {
+    margin-top: 0;
+  }
+}

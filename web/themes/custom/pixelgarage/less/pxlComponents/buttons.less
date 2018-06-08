@@ -1,0 +1,59 @@
+/*
+ *  Buttons component
+ * --------------------------------------------------*/
+
+// Variables
+// -------------------------
+
+
+// Mixins
+// -------------------------
+#pxl-mixins {
+  .btn() {
+    #pxl-mixins.resp-margin-top(40px);
+    #pxl-mixins.resp-margin-bottom(40px);
+    margin-left: 12.5px;
+    margin-right: 12.5px;
+    padding: 10px 30px;
+    border-radius: 0;
+    border: none;
+    font-family: @font-family-sans-serif;
+    #pxl-mixins.font-size-responsive(@resp-button-size-max, @resp-button-size-med, @resp-button-size-min);
+    letter-spacing: @form-button-letter-spacing;
+    line-height: @form-button-line-height;
+    text-align: @form-button-text-align;
+    color: @pxl-color-main;
+    font-style: normal;
+    text-transform: uppercase;
+    background-color: @pxl-color-blue-2;
+    #pxl-mixins.transition(background-color 0.3s ease);
+
+    &:hover, &:focus {
+      text-decoration: none;
+      color: @pxl-color-main;
+      //background-color: @pxl-color-blue-1;
+      background-color: #ff3761;
+      //opacity: 0.8;
+    }
+  }
+}
+
+// General settings
+// -------------------------
+.btn {
+  #pxl-mixins.btn();
+}
+.btn-normal {
+  border: none; //1px solid @text-color;
+  background-color: @pxl-color-blue-2;
+}
+
+.btn-hell {
+  border: none;
+  background-color: #d0c8b9;
+}
+
+// Center buttons in views-footers
+.view-footer {
+  text-align: center;
+}

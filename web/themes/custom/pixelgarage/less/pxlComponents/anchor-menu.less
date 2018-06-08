@@ -1,0 +1,37 @@
+/*
+ *  Buttons component
+ * --------------------------------------------------*/
+
+// Variables
+// -------------------------
+
+
+// Mixins
+// -------------------------
+
+
+
+// General settings
+// -------------------------
+#block-anchormenumedia, #block-newsfilter {
+  .field--name-field-anchor-id {
+    #pxl-mixins.flexbox(wrap; center;);
+
+    .field--item {
+      a {
+        #pxl-mixins.navigation();
+        margin: 10px;
+        color: @pxl-color-grayblue;
+        font-size: 13px;
+        font-weight: 400;
+        @media @normal {
+          margin: 15px;
+          &:hover {
+            border-bottom: 1px solid @pxl-color-grayblue;
+          }
+        }
+      }
+
+    }
+  }
+}

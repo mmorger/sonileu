@@ -1,0 +1,170 @@
+/*
+ *  Node page component
+ * --------------------------------------------------*/
+
+// Variables
+// -------------------------
+
+
+// Mixins
+// -------------------------
+
+
+
+// General settings
+// -------------------------
+// for all nodes
+.path-node {
+  .container {
+    .row {
+      .layout {
+        #pxl-mixins.default-padding();
+        #pxl-mixins.inner-container();
+        #pxl-mixins.resp-margin-bottom(75px);
+        .layout__region--content {
+          #pxl-mixins.inner-container();
+          max-width: 650px;
+
+          .field--name-node-title h2 {
+            #pxl-mixins.title();
+            #pxl-mixins.resp-padding-top(20px);
+            #pxl-mixins.resp-padding-bottom(30px);
+          }
+          .field--name-body, .field--name-field-paragraph {
+            p {
+              //max-width: 650px;
+              img {
+                #pxl-mixins.resp-margin-top(40px);
+                #pxl-mixins.resp-margin-bottom(40px);
+                margin-left: auto;
+                margin-right: auto;
+                //max-width: 60%;
+              }
+            }
+          }
+          .field--name-field-date {
+            #pxl-mixins.date();
+            font-weight: normal;
+          }
+          .field--name-field-link {
+            #pxl-mixins.resp-margin-top(40px);
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            align-content: flex-start;
+            justify-content: center;
+
+          }
+          .field--name-field-video {
+            #pxl-mixins.resp-margin-top(20px);
+            #pxl-mixins.resp-margin-bottom(20px);
+          }
+        }
+      }
+
+    }
+  }
+}
+// Page Media
+.page-node-26 {
+  .container {
+    .row {
+      .layout {
+        #pxl-mixins.resp-margin-bottom(30px);
+      }
+    }
+  }
+}
+// Node type 'page'
+//.page-node-type-page {
+//  .container {
+//    .row {
+//      .layout {
+//        #pxl-mixins.default-padding();
+//        #pxl-mixins.inner-container();
+//        #pxl-mixins.resp-margin-bottom(75px);
+//        .layout__region--content {
+//          #pxl-mixins.inner-container();
+//          max-width: 650px;
+//        }
+//      }
+//    }
+//  }
+//}
+
+// Tables
+.field--name-field-table-title {
+  #pxl-mixins.subtitle();
+  //text-align: center;
+  border-bottom: solid 1px @text-color;
+
+}
+.field--name-field-table {
+  .table-responsive {
+    padding-bottom: 20px;
+    border: none;
+    @media @tablet {
+      padding-bottom: 0px;
+    }
+    table {
+      thead {
+        tr {
+          th {
+            padding: 10px 0;
+            border-bottom: solid 1px #cacaca;
+
+            p {
+              #pxl-mixins.date();
+            }
+            &.col_0 {
+            }
+          }
+        }
+      }
+      tbody {
+        padding-top: 10px;
+        tr {
+          &:nth-of-type(odd) {
+            background: transparent;
+          }
+          &:hover {
+            background-color: transparent;
+          }
+          td {
+            padding: 5px;
+            border: none;
+            @media @tablet {
+              padding: 5px 0;
+              width: 33.333%;
+            }
+            &.row_1 {
+              padding-top: 20px;
+            }
+            p {
+              line-height: 1.25;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Repertoire > make container wider
+body.path-node {
+  &.page-node-15 {
+    .container {
+      .row {
+        .layout {
+          .layout__region--content {
+            max-width: none;
+          }
+        }
+      }
+    }
+  }
+}

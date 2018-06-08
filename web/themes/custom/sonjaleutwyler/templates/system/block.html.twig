@@ -1,0 +1,119 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a block.
+ *
+ * Available variables:
+ * - $block->subject: Block title.
+ * - $content: Block content.
+ * - $block->module: Module that generated the block.
+ * - $block->delta: An ID for the block, unique within each module.
+ * - $block->region: The block region embedding the current block.
+ * - $classes: String of classes that can be used to style contextually through
+ *   CSS. It can be manipulated through the variable $classes_array from
+ *   preprocess functions. The default values can be one or more of the
+ *   following:
+ *   - block: The current template type, i.e., "theming hook".
+ *   - block-[module]: The module generating the block. For example, the user
+ *     module is responsible for handling the default user navigation block. In
+ *     that case the class would be 'block-user'.
+ * - $title_prefix (array): An array containing additional output populated by
+ *   modules, intended to be displayed in front of the main title tag that
+ *   appears in the template.
+ * - $title_suffix (array): An array containing additional output populated by
+ *   modules, intended to be displayed after the main title tag that appears in
+ *   the template.
+ *
+ * Helper variables:
+ * - $classes_array: Array of html class attribute values. It is flattened
+ *   into a string within the variable $classes.
+ * - $block_zebra: Outputs 'odd' and 'even' dependent on each block region.
+ * - $zebra: Same output as $block_zebra but independent of any block region.
+ * - $block_id: Counter dependent on each block region.
+ * - $id: Same output as $block_id but independent of any block region.
+ * - $is_front: Flags true when presented in the front page.
+ * - $logged_in: Flags true when the current user is a logged-in member.
+ * - $is_admin: Flags true when the current user is an administrator.
+ * - $block_html_id: A valid HTML ID and guaranteed unique.
+ *
+ * @ingroup templates
+ *
+ * @see bootstrap_preprocess_block()
+ * @see template_preprocess()
+ * @see template_preprocess_block()
+ * @see bootstrap_process_block()
+ * @see template_process()
+ */
+#}
+
+{#
+  List of full width section
+#}
+
+{%
+  set classes = [
+    'block',
+    'block-' ~ configuration.provider|clean_class,
+    'block-' ~ plugin_id|clean_class,
+    'clearfix',
+  ]
+%}
+
+{%
+  set fullwidth_list = [
+      'block-content80e6463a-4b81-46d1-94c3-4388cc2a74f4',
+      'block-content9f98436d-c22e-4e92-a8c0-b6de60543b63',
+      'block-contentaa0e63a3-899f-4274-b683-dc6aab557da0',
+      'views-blockbranch-menu-block-1',
+      'block-content6d88a337-d290-418b-b6e8-b35f38b5c656',
+      'block-content7f663053-9e8b-4ece-9b55-0529f03aec9f',
+      'block-contentab00fbac-f176-4e42-b431-69d01ab10e47',
+      'block-content61cfac01-2c82-4d3c-b229-65a53190ab3d',
+      'block-contentd629d8dd-e35f-4ba6-8b86-a88f7d442006',
+      'block-content86074a1a-c5a6-42f4-be29-f3d85f4cd2af',
+      'block-contentee911c0b-75d9-4479-a44b-e7627c364780',
+      'block-content2e27fb71-18fe-4d00-bf7f-d617164b5300',
+      'block-contenta45b5358-5c40-48d6-8add-a613e35e3f93',
+      'block-contenta9ae0dd2-07eb-4964-b56b-852e82a16e27',
+      'block-contentbdcfcd11-2d64-4e76-b91d-1c6dbe605f2b',
+      'block-content095a7a98-91fd-41d3-92ba-ce06afae28b5',
+      'views-blockfeature-title-block-1',
+      'webform-block',
+  ]
+%}
+
+{%
+    set ignore_list = [
+        'block-contentab00fbac-f176-4e42-b431-69d01ab10e47',
+        'language-blocklanguage-interface',
+        'block-contenta3c585e7-bea9-43f5-91cc-fd6a1ecb8b29',
+        'views-blockblog-block-2',
+        'block-content7d73b864-8040-449d-83fc-e185273e9f37',
+        'views-blockbranch-header-image-block-1',
+]
+%}
+
+
+{% if plugin_id|clean_class in ignore_list %}
+    {% set container_class = '' %}
+    {% set child_class = '' %}
+{% elseif plugin_id|clean_class not in fullwidth_list %}
+    {% set container_class = 'container' %}
+    {% set child_class = '' %}
+{% else %}
+    {% set container_class = 'container-inside' %}
+    {% set child_class = 'container' %}
+{% endif %}
+
+<section{{ attributes.addClass(classes, container_class) }}>
+  {{ title_prefix }}
+  {% if label %}
+    <h2{{ title_attributes.addClass('block-title') }}>{{ label }}</h2>
+  {% endif %}
+  {{ title_suffix }}
+    <div class={{  child_class }}>
+      {% block content  %}
+        {{ content }}
+      {% endblock %}
+    </div>
+</section>

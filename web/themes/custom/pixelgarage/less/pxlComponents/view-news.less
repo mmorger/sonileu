@@ -1,0 +1,80 @@
+/*
+ *  View component
+ * --------------------------------------------------*/
+
+// Variables
+// -------------------------
+
+
+// Mixins
+// -------------------------
+
+
+
+// General settings
+// -------------------------
+body .main-container .container {
+ .view-news {
+  #pxl-mixins.resp-padding-bottom(50px);
+
+  .view-filters {
+   #pxl-mixins.resp-margin-bottom(30px);
+  }
+
+  .views-view-grid {
+   .row {
+    #pxl-mixins.resp-margin-bottom(30px);
+
+    .field-content {
+
+     .col {
+      &:first-child {
+       margin-bottom: 20px;
+       padding: 0;
+      }
+      &:last-child {
+       padding: 0;
+       @media @tablet {
+        padding-left: 20px;
+       }
+      }
+      .date {
+       #pxl-mixins.date();
+      }
+      h1 {
+       #pxl-mixins.resp-margin-top(20px);
+       #pxl-mixins.subtitle();
+       //#pxl-mixins.font-size-responsive(36px, 30px, 26px); //(28px, 26px, 24px);
+       font-family: @font-family-serif; //@font-family-sans-serif;
+       color: @text-color;
+       font-weight: 400;
+       line-height: 1.2;
+       //text-transform: uppercase;
+       //letter-spacing: 0.03em;
+      }
+      .readmore {
+       #pxl-mixins.small();
+       #pxl-mixins.transition(color 0.3s ease);
+
+       @media @normal {
+        &:hover {
+         color: @pxl-color-red;
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+
+ .page-node-type-news {
+
+  .field--name-field-date {
+   #pxl-mixins.date();
+  }
+  .field--name-node-title {
+
+  }
+ }
+}

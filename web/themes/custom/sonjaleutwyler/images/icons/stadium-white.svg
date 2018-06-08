@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="39px" height="24px" viewBox="0 0 39 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>Page 1</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="0 23.9251 39 23.9251 39 0.0001 0 0.0001"></polygon>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icons/branche---stadium-copy" transform="translate(-6.000000, -13.000000)">
+            <g id="Page-1" transform="translate(6.000000, 13.000000)">
+                <path d="M0.5001,11.9622 C0.5001,18.2932 5.6321,23.4252 11.9621,23.4252 L27.0381,23.4252 C33.3681,23.4252 38.5001,18.2932 38.5001,11.9622 C38.5001,5.6322 33.3681,0.5002 27.0381,0.5002 L11.9621,0.5002 C5.6321,0.5002 0.5001,5.6322 0.5001,11.9622 Z" id="Stroke-1" stroke="#FFFFFF"></path>
+                <path d="M5.961,11.9622 L5.961,11.9622 C5.961,15.0772 8.486,17.6022 11.6,17.6022 L27.399,17.6022 C30.514,17.6022 33.039,15.0772 33.039,11.9622 C33.039,8.8482 30.514,6.3232 27.399,6.3232 L11.6,6.3232 C8.486,6.3232 5.961,8.8482 5.961,11.9622 Z" id="Stroke-3" stroke="#FFFFFF"></path>
+                <path d="M3.3502,11.9622 L3.3502,11.9622 C3.3502,16.7022 7.1922,20.5442 11.9322,20.5442 L27.0682,20.5442 C31.8082,20.5442 35.6502,16.7022 35.6502,11.9622 C35.6502,7.2232 31.8082,3.3812 27.0682,3.3812 L11.9322,3.3812 C7.1922,3.3812 3.3502,7.2232 3.3502,11.9622 Z" id="Stroke-5" stroke="#FFFFFF"></path>
+                <path d="M11.1915,17.6321 L11.1915,6.3541" id="Stroke-7" stroke="#FFFFFF"></path>
+                <path d="M28.0299,17.6321 L28.0299,6.3541" id="Stroke-9" stroke="#FFFFFF"></path>
+                <path d="M19.6104,17.6321 L19.6104,13.9541" id="Stroke-11" stroke="#FFFFFF"></path>
+                <path d="M19.6104,10.0315 L19.6104,6.3535" id="Stroke-13" stroke="#FFFFFF"></path>
+                <path d="M19.6104,10.0315 C20.6154,10.0315 21.4304,10.9095 21.4304,11.9935 C21.4304,13.0765 20.6154,13.9545 19.6104,13.9545 C18.6054,13.9545 17.7904,13.0765 17.7904,11.9935 C17.7904,10.9095 18.6054,10.0315 19.6104,10.0315 Z" id="Stroke-15" stroke="#FFFFFF"></path>
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Clip-18"></g>
+                <polygon id="Stroke-17" stroke="#FFFFFF" mask="url(#mask-2)" points="25.071 14.1991 28.029 14.1991 28.029 9.7861 25.071 9.7861"></polygon>
+                <polygon id="Stroke-19" stroke="#FFFFFF" mask="url(#mask-2)" points="11.191 14.1991 14.149 14.1991 14.149 9.7861 11.191 9.7861"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

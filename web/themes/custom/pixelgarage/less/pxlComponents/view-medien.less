@@ -1,0 +1,61 @@
+/*
+ *  View component
+ * --------------------------------------------------*/
+
+// Variables
+// -------------------------
+
+
+// Mixins
+// -------------------------
+#pxl-mixins {
+
+ .audio-field() {
+  #pxl-mixins.resp-margin-bottom(15px);
+  .audiofield {
+   .mediaelementaudio_frame {
+    .mejs__container {
+     width: 100% !important;
+    }
+   }
+   label {
+    display: none;
+   }
+  }
+ }
+}
+
+
+// General settings
+// -------------------------
+
+.view-medien {
+ //#pxl-mixins.inner-container();
+
+ .views-field-field-image {
+  .field-content {
+   #pxl-mixins.flexbox(wrap; center;);
+
+   img {
+    padding: 10px;
+    max-width: 300px;
+   }
+  }
+ }
+ .field--name-field-audio-file {
+  #pxl-mixins.audio-field();
+ }
+}
+
+body.path-presse {
+ .view-pressestimmen {
+  .views-row {
+   #pxl-mixins.resp-margin-bottom(75px);
+   .layout__region--content {
+    .field--name-body {
+
+    }
+   }
+  }
+ }
+}

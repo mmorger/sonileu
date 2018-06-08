@@ -1,0 +1,81 @@
+/*
+ *  Text paragraph component
+ * --------------------------------------------------*/
+
+// Variables
+// -------------------------
+
+
+// Mixins
+// -------------------------
+
+
+// Component
+// -------------------------
+.paragraph {
+
+  .field--name-field-body {
+    h2 {
+      #pxl-mixins.subtitle();
+    }
+  }
+
+  &.paragraph--type--pdf {
+    .file {
+      font-weight: normal;
+      font-size: 100%;
+
+      span {
+        border: none;
+        background-color: transparent;
+      }
+      .file-icon {
+        display: none;
+        .icon {
+          &:before {
+          }
+        }
+      }
+      .file-link {
+        a {
+          color: @pxl-color-blue-3;
+          &:before {
+            display: inline-block;
+            margin-right: 10px;
+            width: 35px;
+            height: 35px;
+            content: '';
+            background: top left url(../images/icon-pdf.png);
+            background-size: contain;
+            vertical-align: middle;
+          }
+          @media @normal {
+            &:hover {
+              opacity: 0.8;
+            }
+          }
+        }
+      }
+      .file-size {
+        display: none;
+      }
+    }
+  }
+
+  &.paragraph--type--video {
+    #pxl-mixins.resp-margin-bottom(50px);
+
+    .field--name-field-body {
+      p {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &.paragraph--type--audio-datei {
+    .field--name-field-audio-file {
+      #pxl-mixins.audio-field();
+    }
+  }
+
+}

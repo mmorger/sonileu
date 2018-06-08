@@ -1,0 +1,87 @@
+.page-node-type-text-page .layout {
+  padding-top: 36px; }
+
+.page-node-type-text-page #downScroll {
+  display: none !important; }
+
+.page-node-type-text-page .header-background {
+  background: none;
+  height: 150px !important;
+  min-height: 150px !important; }
+  @media screen and (min-width: 768px) {
+    .page-node-type-text-page .header-background {
+      min-height: 300px !important;
+      height: 300px !important; } }
+  .page-node-type-text-page .header-background .field--name-field-title {
+    margin-bottom: 19px; }
+
+.page-node-type-text-page #block-developerheadertext-2 h1 {
+  display: none; }
+
+.page-node-type-text-page #block-developerheadertext-2 .field--name-body p {
+  text-align: center;
+  font-size: 24px;
+  font-family: 'llbrown-regular';
+  line-height: 1.33;
+  color: #2D96E4;
+  margin-top: 36px;
+  margin-bottom: 16px; }
+  @media screen and (min-width: 768px) {
+    .page-node-type-text-page #block-developerheadertext-2 .field--name-body p {
+      margin-bottom: 0;
+      display: none; } }
+
+.page-node-type-text-page #block-developerheadertext {
+  position: absolute;
+  top: 75px;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 1;
+  text-align: center;
+  max-width: 970px; }
+  @media screen and (min-width: 768px) {
+    .page-node-type-text-page #block-developerheadertext {
+      top: 150px; } }
+  .page-node-type-text-page #block-developerheadertext .field--name-body > h1 {
+    line-height: 1.13;
+    margin-bottom: 19px;
+    color: #003841; }
+  .page-node-type-text-page #block-developerheadertext .field--name-body > p {
+    display: none;
+    line-height: 1.27;
+    font-family: 'llbrown-regular';
+    color: #fff;
+    font-size: 18px; }
+    @media screen and (min-width: 768px) {
+      .page-node-type-text-page #block-developerheadertext .field--name-body > p {
+        font-size: 26px;
+        display: block; } }
+
+.page-node-type-text-page .region-header-nav {
+  background-color: transparent;
+  -webkit-box-shadow: none;
+          box-shadow: none; }
+  .page-node-type-text-page .region-header-nav #block-sitebranding .field--name-body p a:before {
+    content: url("../images/logo/staffcloud_logo_inverted.svg"); }
+  .page-node-type-text-page .region-header-nav .language-switcher-language-url ul:after {
+    color: #a4aeb3; }
+    @media screen and (min-width: 768px) {
+      .page-node-type-text-page .region-header-nav .language-switcher-language-url ul:after {
+        color: #fff; } }
+  .page-node-type-text-page .region-header-nav .language-switcher-language-url ul li.is-active a {
+    color: #a4aeb3; }
+    @media screen and (min-width: 768px) {
+      .page-node-type-text-page .region-header-nav .language-switcher-language-url ul li.is-active a {
+        color: #fff; } }
+  .page-node-type-text-page .region-header-nav.invert-header {
+    background-color: #fff;
+    -webkit-box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.1);
+            box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.1); }
+    .page-node-type-text-page .region-header-nav.invert-header #block-sitebranding .field--name-body p a:before {
+      content: url("../images/logo/staffcloud_logo_normal.svg"); }
+    .page-node-type-text-page .region-header-nav.invert-header .language-switcher-language-url ul:after {
+      color: #A4AEB3; }
+    .page-node-type-text-page .region-header-nav.invert-header .language-switcher-language-url ul li.is-active a {
+      color: #A4AEB3; }

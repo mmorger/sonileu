@@ -1,0 +1,709 @@
+.path-about {
+  //start head sub-nav
+  .block-block-contentd629d8dd-e35f-4ba6-8b86-a88f7d442006 {
+    background-color: $footer-bg;
+    margin-bottom: 100px;
+    .field--type-text-with-summary {
+      text-align: center;
+      a {
+        display: inline-block;
+        line-height: 1.38;
+        padding-top: 15px;
+        padding-bottom: 17px;
+        margin-right: 40px;
+        font-size: $ancor-text-about;
+        text-decoration: none;
+        color: $gray;
+        @include media($screen-sm) {
+          font-size: $body-mobile;
+          line-height: 1.13;
+          padding-top: 24px;
+          padding-bottom: 23px;
+          margin-right: 60px;
+        }
+      }
+      a:last-of-type {
+        margin-right: 0;
+      }
+    }
+  }
+  //start "How it all started" section
+  .block-block-contente1744d38-a8fd-4dbf-9f2b-cd6a856ce210 {
+    @include media($screen-sm) {
+      @include row-to-percent(width,9);
+    }
+    @include media($screen-md2) {
+      width: 700px;
+    }
+    .field--name-body,
+    .field--name-field-title {
+      > h2 {
+        text-align: center;
+        margin-bottom: 25px;
+        @include media($screen-sm) {
+          margin-bottom: 58px;
+        }
+      }
+      p {
+        line-height: 1.63;
+        @include  media($screen-md) {
+          line-height: 1.37;
+        }
+      }
+    }
+    > div {
+      width:100%;
+    }
+    .field--type-text-with-summary {
+      margin-bottom: 35px;
+      @include  media($screen-md) {
+        margin-bottom: 70px;
+      }
+    }
+    .field--name-field-image-description {
+      font-family: 'NeuzeitOffice';
+      font-size: $text-small;
+      margin-top: 20px;
+      text-align: right;
+    }
+    img {
+      margin: 0 auto;
+    }
+  }
+  //start "Milestones" section
+  .block-views-blockmilestones-block-1 {
+    @include media($screen-sm) {
+      @include row-to-percent(width,9);
+    }
+    @include media($screen-md2) {
+      width:700px;
+    }
+    .milstones-wrapper {
+      width:100%;
+      padding-left:10px;
+      @include media($screen-sm) {
+        padding-left:0;
+      }
+    }
+
+    .block-title {
+      text-align: center;
+      line-height: 1.21;
+      margin-bottom: 37px;
+      margin-top: 47px;
+      @include media($screen-sm) {
+        line-height: 1.05;
+        margin-bottom: 75px;
+        margin-top: 85px;
+      }
+    }
+    .view-id-milestones {
+      .views-row {
+        display: none;
+        margin-bottom: 31px;
+        @include media($screen-md) {
+          margin-bottom:26px;
+        }
+        .views-field-title {
+          font-family: 'llbrown-regular';
+          position: relative;
+          margin-bottom: 2px;
+          padding-left: 32px;
+          @include media($screen-md) {
+            margin-bottom: 10px;
+            padding-left: 57px;
+          }
+          span {
+            font-size: $text-first;
+            line-height: 1.42;
+            color: $green;
+            @include media($screen-sm) {
+              line-height: 1.25;
+              font-size: $icons-desktop;
+            }
+          }
+        }
+        .views-field-title:before {
+          content: "";
+          display: block;
+          @include absolute-vertical-center;
+          left:-11px;
+          width: 26px;
+          height: 26px;
+          border: 4px solid $green;
+          border-radius: 50%;
+          background-color: white;
+          z-index: 1;
+        }
+        .views-field-body {
+          position: relative;
+          border-left: 4px solid $green;
+          padding-left: 32px;
+          @include media($screen-md) {
+            padding-left: 57px;
+          }
+          span {
+            line-height: 1.29;
+            font-size: $text-small;
+            @include media($screen-sm) {
+              line-height: 1.37;
+              font-size: $body-desktop;
+            }
+          }
+        }
+        .views-field-body:after {
+          content: "";
+          display: block;
+          position: absolute;
+          background-color: $green;
+          width: 4px;
+          height: 50px;
+          left: -4px;
+          bottom: -45px;
+        }
+        .views-field-body:before {
+          content: "";
+          display: block;
+          position: absolute;
+          background-color: $green;
+          width: 4px;
+          height: 50px;
+          left: -4px;
+          top: -28px;
+        }
+      }
+      .views-row:last-child {
+        margin-bottom: 0;
+        .views-field-body {
+          border-left-color: transparent;
+          &:after,
+          &:before {
+            display: none;
+          }
+        }
+      }
+      //display first five items
+      .views-row:nth-child(-n+5) {
+        display: block;
+      }
+      .views-row:nth-child(5) {
+        .views-field-body:after {
+          height: 25px;
+          bottom: -25px;
+        }
+        //new classs for jquery
+        .after-height {
+          &:after {
+            height: 50px;
+            bottom: -40px;
+          }
+        }
+      }
+      //styles for button show full history
+      .view-footer {
+        position: relative;
+        padding-left: 32px;
+        @include media($screen-md) {
+          padding-left: 57px;
+        }
+        a {
+          color: $green;
+          text-decoration: underline;
+          line-height: 1.86;
+          letter-spacing: 0.1px;
+          font-size: $text-small;
+          @include media($screen-md) {
+            line-height: 1.37;
+            font-size: $body-desktop;
+          }
+        }
+        &:after,
+        &:before {
+          content: "";
+          display: block;
+          position: absolute;
+          background-color: $green;
+          width: 4px;
+          height:4px;
+        }
+        &:after {
+          bottom: 9px;
+          left: 0px;
+        }
+        &:before {
+          top: 5px;
+          left: 0px;
+        }
+      }
+    }
+  }
+  .block-block-contenta3ea651e-d32a-48f5-80de-7dba031b5a32 {
+    @include media($screen-sm) {
+      @include row-to-percent(width,9);
+    }
+    @include media($screen-md2) {
+      width:700px;
+    }
+    h2 {
+      text-align: center;
+      font-size: $h2-mobile;
+      line-height: 1.21;
+      margin-top: 56px;
+      margin-bottom: 27px;
+      @include media($screen-sm) {
+        text-align: left;
+        line-height: 1.27;
+        font-size: $lead;
+        margin-top: 106px;
+        margin-bottom: 21px;
+      }
+    }
+    p {
+      line-height: 1.37;
+      margin-bottom: 83px;
+      @include media($screen-sm) {
+        margin-bottom: 96px;
+      }
+    }
+  }
+  //start "Staffcloud in numbers" section
+  .block-block-contente7e71ecf-9e5d-4c6b-9856-6942958c6cae {
+    position: relative;
+    min-height: 478px;
+    background-color: $green;
+    @include media($screen-sm) {
+      min-height: 577px;
+    }
+    .block-title {
+      margin-top: 42px;
+      text-align: center;
+      width: 76%;
+      margin-left: auto;
+      margin-right: auto;
+      @include media($screen-sm) {
+        width: auto;
+        margin-top: 81px;
+      }
+    }
+    .field--name-block-description {
+      position: absolute;
+      top: -111px;
+      text-align: center;
+      width: 100%;
+      @include media ($screen-sm) {
+        top: -150px;
+      }
+    }
+    .layout--onecol {
+      position: absolute;
+      width: 100%;
+      top: 153px;
+      @include  media($screen-sm) {
+        top: 231px;
+      }
+    }
+    .field--type-entity-reference-revisions {
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      @include  media($screen-sm) {
+        flex-wrap: nowrap;
+      }
+      > .field--item {
+        width: 50%;
+        @include media($screen-sm) {
+          width: 100%;
+        }
+        .paragraph--type--staffcloud-in-numbers {
+          text-align: center;
+          .field--name-field-number-title {
+            color: $blue-dark;
+            margin: 0 auto;
+            font-size: $text-small;
+            white-space: nowrap;
+            line-height: 1.29;
+            //margin-bottom: -5px;
+            @include media($screen-sm) {
+              line-height: 1.3;
+              font-size: $staff-title-size;
+            }
+          }
+          .field--name-field-number {
+            margin: 0 auto;
+            font-size: $staff-numbers-size;
+            font-family: 'llbrown-regular';
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            letter-spacing: normal;
+            //line-height: 0.49;
+            color: $white;
+            display: none;
+            @include media($screen-sm) {
+              //line-height: 0.43;
+            }
+            &.animation-bounce {
+                animation: animation 1000ms linear both;
+              animation-fill-mode: both;
+              display: block;
+              @keyframes animation {
+                0% { transform: matrix3d(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+                5.81% { transform: matrix3d(0.28, 0, 0, 0, 0, 0.28, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+                11.61% { transform: matrix3d(0.76, 0, 0, 0, 0, 0.76, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+                17.42% { transform: matrix3d(1.18, 0, 0, 0, 0, 1.18, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+                23.12% { transform: matrix3d(1.285, 0, 0, 0, 0, 1.285, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+                30.33% { transform: matrix3d(1.196, 0, 0, 0, 0, 1.196, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+                37.44% { transform: matrix3d(1.065, 0, 0, 0, 0, 1.065, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+                44.54% { transform: matrix3d(0.988, 0, 0, 0, 0, 0.988, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+                51.65% { transform: matrix3d(0.968, 0, 0, 0, 0, 0.968, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+                80.28% { transform: matrix3d(1.004, 0, 0, 0, 0, 1.004, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+                100% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  //start "Our values" section
+  .block-block-content6b535e31-c63f-4919-8e5b-f24263f853b9 {
+    @include media($screen-sm) {
+      @include row-to-percent(width,9);
+    }
+    @include media($screen-md2) {
+      width:700px;
+    }
+    .block-title,
+    .field--name-field-title {
+      text-align: center;
+      line-height: 1.05;
+      margin-top: 34px;
+      margin-bottom: 101px;
+      h2 > a:first-child {
+        color: $blue-dark;
+        padding-top: 50px;
+        display: block;
+      }
+    }
+    .field--type-text-with-summary {
+      h3 {
+        line-height: 1.27;
+        font-size: $lead;
+        margin-bottom: 17px;
+      }
+      p {
+        font-size: $body-mobile;
+        line-height: 1.37;
+        margin-bottom: 68px;
+        @include media ($screen-640) {
+          font-size: $body-desktop;
+        }
+      }
+      p:last-of-type {
+        margin-bottom: 160px;
+      }
+    }
+  }
+  //start "Jobs" section
+  .block-block-content61cfac01-2c82-4d3c-b229-65a53190ab3d {
+    background-color: $blue;
+    margin-bottom: 56px;
+
+    .block-title,
+    .field--name-field-title{
+      text-align: center;
+      line-height: 1.05;
+      margin-bottom: 42px;
+      color: $bright-turquoise;
+      -webkit-background-clip: content-box;
+      background-clip: content-box;
+      > a {
+        padding-top: 61px;
+        display: block;
+      }
+      h2 {
+        color: $bright-turquoise;
+      }
+    }
+    .container {
+      @include media($screen-sm) {
+        @include row-to-percent(width,9);
+      }
+      @include media($screen-md2) {
+        width:700px;
+      }
+    }
+    .field--type-text-with-summary {
+      line-height: 1.37;
+      color: $white;
+      margin-bottom: 72px;
+      @include media($screen-md2) {
+        width: 100%;
+      }
+    }
+  }
+  //start section with flip icons
+  .block-block-contentccf6cc03-6b11-4c1b-8312-01dbbff8a346 {
+    //width: 70%;
+    //margin: 0 auto;
+    @include media($screen-sm) {
+      @include row-to-percent(width,9);
+    }
+    @include media($screen-md2) {
+      width:700px;
+    }
+    .field--type-text-with-summary {
+      h3 {
+        font-size: $lead;
+        line-height: 1.27;
+        margin-bottom: 19px;
+      }
+      p {
+        line-height: 1.37;
+        margin-bottom: 60px;
+      }
+    }
+    .field--type-entity-reference-revisions {
+      display: flex;
+      flex-wrap: wrap;
+      > div {
+        width: 100%;
+        text-align: center;
+        min-height: 100px;
+        @include media ($screen-640) {
+          width: 49%;
+        }
+        @include media ($screen-sm) {
+          width: 33.33%;
+        }
+        &.field--item {
+          &:hover {
+            .paragraph--type--jobs-conditions {
+              .back-section {
+                transform: rotateY(0);
+              }
+              .front-section {
+                transform: rotateY(180deg);
+              }
+            }
+          }
+        }
+        .paragraph--type--jobs-conditions {
+          width: 222px;
+          height: 222px;
+          position: relative;
+          transition: transform 1s;
+          @include media ($screen-sm) {
+            width: 205px;
+            height: 222px;
+          }
+          @include media ($screen-md) {
+            width: 222px;
+            height: 222px;
+          }
+
+          .back-section {
+            display: flex;
+            border-radius: 3px;
+            width: 100%;
+            height: 100%;
+            transform: rotateY(-180deg);
+            backface-visibility: hidden;
+            background-color: $blue;
+            transition: transform .6s;
+            position: absolute;
+            top: 0;
+            left: 0;
+            flex-direction: column;
+            padding: 20px 10px 30px;
+            .field--name-field-title {
+              color: $white;
+              position: static;
+              order: 0;
+              padding-bottom: 15px;
+              font-size: 20px;
+            }
+            .field--name-field-description {
+              order: 1;
+            }
+          }
+
+          .front-section {
+            border-radius: 3px;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            transition: transform .6s;
+          }
+
+          .field--name-field-description {
+            background-color: transparent;
+            color: $white;
+            border-radius: 5px;
+          }
+          .field--name-field-image {
+            display: flex;
+            height: 100%;
+            img {
+              margin: auto;
+              padding-bottom: 30px;
+            }
+          }
+        }
+      }
+    }
+    //flip card  animation start
+    .paragraph--type--jobs-conditions {
+      margin: 0 auto;
+      transition: all 0.2s;
+      perspective: 900px;
+    }
+    .field--name-field-title {
+      position: absolute;
+      top: 150px;
+      left: 0;
+      right: 0;
+      font-size: 16px;
+      color: $color-location;
+    }
+     .field--name-field-description {
+
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+       
+      line-height: 1.13;
+      font-size: $body-mobile;
+      text-align: center;
+      //backface-visibility: hidden;
+      //transform-style: preserve3d;
+      //transition: all 0.4s;
+    }
+    //.field--name-field-description {
+    //  transform: rotateY(-180deg);
+    //}
+    //.paragraph--type--jobs-conditions:hover .field--name-field-description {
+    //  transform: rotateY(0deg);
+    //}
+    //.paragraph--type--jobs-conditions:hover .field--name-field-title {
+    //  transform: rotateY(180deg);
+    //}
+    //flip card animation end
+  }
+  //start "Vacancies" section
+  .block-views-blockjobs-block-1 {
+    margin-bottom: 75px;
+    .block-title {
+      line-height: 1.05;
+      text-align: center;
+      margin-top: 125px;
+      margin-bottom: 70px;
+      color: $blue;
+    }
+    .form-group {
+      width: 90%;
+      margin: 0 auto;
+
+      .views-row {
+        background-color: $blue;
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        overflow: hidden;
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+        margin-bottom: 30px;
+        @include media ($screen-xs) {
+          flex-wrap: nowrap;
+        }
+        > div:first-child {
+          width: 100%;
+          padding-left: 20px;
+          padding-right: 20px;
+          background-color: $white;
+          @include media ($screen-xs) {
+            width: 80%;
+          }
+          @include media ($screen-sm) {
+            padding-left: 45px;
+            padding-right: 76px;
+          }
+        }
+        .views-field-title {
+          margin: 27px 0 0 0;
+          span {
+            font-family: 'llbrown-regular';
+            font-size: $lead;
+            line-height: 1.27;
+            color: $blue;
+          }
+        }
+        .views-field-field-subtitle {
+          line-height: 1.37;
+          margin: 17px 0 30px 0;
+        }
+        .views-field-view-node {
+          cursor: pointer;
+          position: relative;
+          width: 100%;
+          order:2;
+          background-color: $blue;
+          height: 50px;
+          @include media ($screen-xs) {
+            width: 20%;
+            min-width: 145px;
+            height: auto;
+          }
+          @include media ($screen-640) {
+            min-width: 175px;
+          }
+          span {
+            @include absolute-center;
+            a {
+              line-height: 1.37;
+              color: $white;
+            }
+          }
+        }
+      }
+      .views-row:last-child {
+        margin-bottom: 0;
+
+      }
+    }
+  }
+  //start last but one section
+  .block-block-contentf50b60f8-e554-4a85-9c3c-a9103b288a2d {
+    padding-top: 86px;
+    > a {
+      padding-top: 50px;
+      display: block;
+    }
+    .field--name-field-office-information {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      > div {
+        width:100%;
+        @include media($screen-640) {
+          width:49.1%;
+        }
+        .field--name-field-location {
+          line-height: 1.17;
+          font-family: 'llbrown-regular';
+          font-size: $text-first;
+          color: $color-location;
+          margin-bottom: 35px;
+        }
+        .field--name-field-information {
+          line-height: 1.37;
+          margin-top: 25px;
+          margin-bottom: 28px;
+          p:nth-of-type(2) {
+            margin-top: 25px;
+          }
+        }
+      }
+    }
+  }
+}

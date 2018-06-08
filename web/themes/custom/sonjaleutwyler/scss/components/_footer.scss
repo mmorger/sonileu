@@ -1,0 +1,171 @@
+.footer {
+  border-top: 0;
+  padding-top: 28px;
+  background-color: $lightgrey;
+  //@include media (640px) {
+  //  background-color: transparent;
+  //}
+  height: 549px;
+  @include media ($screen-sm) {
+    padding-top: 40px;
+    height: 400px;
+  }
+  .region-footer {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    justify-content: center;
+    @include media ($screen-sm) {
+      flex-wrap: nowrap;
+    }
+    //correcting footer's content width start
+    //@include media ($screen-md2) {
+    //  width: 782px;
+    //}
+    //end
+    @include media ($screen-sm) {
+      @include row-to-percent(width,10);
+      //@include row-to-percent(margin-left,2);
+    }
+    @include media ($screen-md) {
+      @include row-to-percent(width,8);
+    }
+    > nav {
+      width: 50%;
+      text-align: left;
+      margin-bottom: 25px;
+      &:nth-child(even) {
+        padding-left: $gutter-width / 2;
+        @include media($screen-sm) {
+          padding-left: 20px;
+        }
+      }
+      &:nth-child(odd) {
+        width: 49%;
+        @include media($screen-sm) {
+          width: 25%;
+        }
+      }
+      &:first-child {
+        @include media ($screen-md) {
+          width: 16%;
+        }
+      }
+      &:last-child {
+        @include media ($screen-md) {
+          width: 16%;
+        }
+      }
+      &:nth-last-child(2) {
+        @include media ($screen-sm) {
+          width: auto;
+        }
+      }
+      @include media ($screen-sm) {
+        //width: 25%;
+        width: auto;
+        margin-bottom: 0;
+        padding-right: 20px;
+        padding-left: 20px;
+      }
+      &:first-child {
+        padding-left: 0;
+      }
+      &:last-child {
+        padding-right: 0;
+      }
+      h2#block-companies-menu,
+      h2#block-resources-menu,
+      h2#block-solutions-menu,
+      h2#block-product-menu {
+        color: $blue-dark;
+        font-size: $body-mobile;
+        font-family: "llbrown-regularalt", $f-sans-serif;
+        font-weight: normal;
+        line-height: 0.94;
+        padding: 0;
+        margin-bottom: 13px;
+      }
+      //@include media (640px) {
+      //  min-height: 270px;
+      //  min-width: 132px;
+      //  max-width: 200px;
+      //  margin-left: 10px;
+      //}
+      #block-product-menu, #block-solutions-menu,
+      #block-companies-menu, #block-resources-menu {
+        color: $blue-dark;
+        font-family: "llbrown-regularalt", $f-sans-serif;
+      }
+      ul li a {
+        color: $blue-dark;
+        font-family: 'NeuzeitOffice', $f-sans-serif;
+        padding: 5px 10px;
+        padding-left: 0;
+        font-weight: normal;
+        -webkit-padding-start: 0;
+        font-size: $text-mobile-footer;
+        line-height: 1.25;
+        white-space: nowrap;
+        @include media ($screen-sm) {
+          font-size: $text-small;
+          line-height: 1.07;
+        }
+        &:hover,
+        &:focus,
+        &.is-active,
+        &:active {
+          background-color: transparent;
+        }
+      }
+    }
+    nav:first-child {
+      margin-left: 0;
+    }
+    nav#block-solutions {
+      @include media ($screen-sm) {
+        margin-bottom: 0;
+      }
+    }
+  }
+  //swiss made software block start
+  position: relative;
+  &:after {
+    display: inline-block;
+    width: 171px;
+    height: 30px;
+    content: '';
+    position: absolute;
+    bottom: 26px;
+    left: 50%;
+    background-image: url('../images/logo/logo-swiss-made-software.png');
+    background-size: 171px;
+    transform: translate(-50%, 0);
+    @include media($screen-sm) {
+      bottom: 37px;
+      right: 56px;
+      left: auto;
+      transform: none;
+    }
+    @include media($screen-lg) {
+      bottom: 44px;
+    }
+  }
+}
+.path-blog footer {
+  border-top: 1px solid #E5E5E5;
+  margin-top: 160px;
+}
+.path-frontpage footer {
+  border-top: none;
+  margin-top: 0;
+}
+.path-faq footer,
+.path-product footer,
+.page-node-type-product-feature footer,
+.page-node-type-article footer {
+  margin-top: 0;
+}
+.page-node-type-text-page footer {
+  margin-top: 131px;
+}

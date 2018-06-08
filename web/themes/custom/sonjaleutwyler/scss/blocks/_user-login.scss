@@ -1,0 +1,19 @@
+.path-user {
+  .header-background {
+    min-height: auto;
+    max-height: 300px;
+    .region-header {
+      .field--name-field-desktop-image {
+        img {
+          min-height: auto;
+          max-height: 300px;
+        }
+      }
+    }
+  }
+  .region-content {
+    max-width: 970px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+}
