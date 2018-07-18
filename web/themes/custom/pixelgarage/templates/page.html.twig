@@ -179,7 +179,7 @@
 {% if page.footer %}
   {% block footer %}
     <footer class="footer {{ container }}" role="contentinfo">
-        <div class="wrapper">{{ page.footer }} <div class="footer-element year">© {{ 'now'|date('Y') }}</div>
+        <div class="wrapper"><a href="https://www.klassikfestival.ch/" class="logo-festival"></a>{{ page.footer }} <div class="footer-element year">© {{ 'now'|date('Y') }}</div>
         </div>
     </footer>
   {% endblock %}

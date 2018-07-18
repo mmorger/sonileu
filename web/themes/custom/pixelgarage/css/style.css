@@ -14855,6 +14855,9 @@ footer.footer.container .wrapper nav ul.nav {
 }
 @media screen and (min-width: 64em) {
   footer.footer.container .wrapper nav ul.nav {
+    flex-wrap: wrap;
+    justify-content: left;
+    align-content: flex-start;
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -14927,5 +14930,21 @@ footer.footer.container .wrapper .footer-element .active {
 @media screen and (min-width: 48em) {
   footer.footer.container .wrapper .footer-element {
     line-height: 1;
+  }
+}
+footer.footer.container .wrapper .logo-festival {
+  margin: 10px;
+  margin-bottom: 35px;
+  display: block;
+  width: 160px;
+  height: 60px;
+  background: center center no-repeat url(../images/klassikfestival.svg);
+  background-size: contain;
+}
+@media screen and (min-width: 64em) {
+  footer.footer.container .wrapper .logo-festival {
+    position: absolute;
+    margin: 0;
+    left: 5rem;
   }
 }

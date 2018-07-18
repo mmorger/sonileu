@@ -58,11 +58,7 @@ footer.footer.container {
         margin: 0;
 
         @media @normal {
-          display: -webkit-box;
-          display: -moz-box;
-          display: -ms-flexbox;
-          display: -webkit-flex;
-          display: flex;
+          #pxl-mixins.flexbox();
           flex-wrap: nowrap;
           align-items: flex-start;
         }
@@ -96,6 +92,21 @@ footer.footer.container {
       #pxl-mixins.navigation();
       color: @text-color;
       padding: 10px 15px;
+    }
+    .logo-festival {
+      margin: 10px;
+      margin-bottom: 35px;
+      display: block;
+      width: 160px;
+      height: 60px;
+      background: center center no-repeat url(../images/klassikfestival.svg);
+      background-size: contain;
+
+      @media @normal {
+        position: absolute;
+        margin: 0;
+        left: 5rem;
+      }
     }
   }
 }
