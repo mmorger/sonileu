@@ -47,12 +47,8 @@
             font-weight: normal;
           }
           .field--name-field-link {
-            #pxl-mixins.resp-margin-top(40px);
-            display: -webkit-box;
-            display: -moz-box;
-            display: -ms-flexbox;
-            display: -webkit-flex;
-            display: flex;
+            #pxl-mixins.resp-margin-top(30px);
+            #pxl-mixins.flexbox();
             flex-wrap: wrap;
             align-items: flex-start;
             align-content: flex-start;
@@ -69,6 +65,18 @@
     }
   }
 }
+// Page Repertoire
+.page-node-15 {
+  .container {
+    .row {
+      .layout {
+        .field--name-node-title {
+          display: none;
+        }
+      }
+    }
+  }
+}
 // Page Media
 .page-node-26 {
   .container {
@@ -79,22 +87,6 @@
     }
   }
 }
-// Node type 'page'
-//.page-node-type-page {
-//  .container {
-//    .row {
-//      .layout {
-//        #pxl-mixins.default-padding();
-//        #pxl-mixins.inner-container();
-//        #pxl-mixins.resp-margin-bottom(75px);
-//        .layout__region--content {
-//          #pxl-mixins.inner-container();
-//          max-width: 650px;
-//        }
-//      }
-//    }
-//  }
-//}
 
 // Tables
 .field--name-field-table-title {

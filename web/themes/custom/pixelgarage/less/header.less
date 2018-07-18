@@ -188,7 +188,7 @@ header#navbar {
               &:hover {
                 opacity: 0.6;
                 text-decoration: @link-decoration-hover;
-                background: none;
+                background: transparent;
               }
               &.is-active {
                 &:hover {
@@ -246,11 +246,11 @@ body {
       }
     }
   }
-  // Repertoire
-  &.page-node-15 {
+  // Repertoire + Media
+  &.page-node-15, &.page-node-26 {
     header#navbar {
       .header-background {
-        //background-position-y: center;
+        background-position-y: 25%;
       }
     }
   }

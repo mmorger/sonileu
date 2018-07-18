@@ -29,14 +29,38 @@
       }
     }
   }
+  // Past Events
+  &.view-display-id-block_3 {
+    .col {
+      margin-bottom: 15px;
+    }
+    #pxl-mixins.date();
+    font-weight: 300;
+    time {
+      display: block;
+    }
+    .title {
+      font-weight: 600;
+    }
+    @media @tablet {
+      time {
+        display: inline;
+      }
+    }
+  }
 }
 .node.node--view-mode-teaser {
 
-  border-top: solid 2px @text-color;
+  position: relative;
+  border-top: solid 1px @text-color;
 
   @media @tablet {
+    height: 180px;
     border-bottom: solid 1px #cacaca;
-
+  }
+  @media @normal {
+    height: 180px;
+    border-top: solid 2px @text-color;
   }
 
   .field--name-field-date {
@@ -54,17 +78,30 @@
   .field--name-node-title {
     font-weight: 600;
   }
+  .field--name-field-ort {
+    padding-bottom: 20px;
+  }
   ul.links {
+    position: absolute;
     margin: 0;
-    padding: 5px 0;
-    text-align: right;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    top: 0;
     @media @normal {
-      padding: 20px 0 10px;
+      //padding: 0 0 10px;
     }
 
     .node-readmore {
+      #pxl-mixins.flexbox();
+      width: 100%;
+      height: 100%;
+      justify-content: flex-end;
 
       a {
+        align-self: flex-end;
+        padding-bottom: 7.5px;
+
         #pxl-mixins.small();
         #pxl-mixins.transition(color 0.2s ease);
 
@@ -78,6 +115,7 @@
           height: 100%;
         }
         @media @normal {
+          padding-bottom: 10px;
           color: transparent;
           &:hover {
             color: @pxl-color-blue-1;
