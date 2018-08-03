@@ -21,6 +21,7 @@
         "drupal-composer/drupal-scaffold": "^2.5",
         "drupal/admin_toolbar": "^1.24",
         "drupal/backup_migrate": "^4.0",
+        "drupal/bg_image_formatter": "^1.2",
         "drupal/console": "^1.0.2",
         "drupal/core": "~8.5.3",
         "drupal/entity_clone": "^1.0@alpha",
