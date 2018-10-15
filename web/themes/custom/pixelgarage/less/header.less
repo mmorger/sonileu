@@ -140,6 +140,7 @@ header#navbar {
       }
     }
     @media @tablet {
+      position: relative;
       height: auto;
       opacity: 1;
     }
@@ -151,7 +152,7 @@ header#navbar {
       padding-top: 50px;
       text-align: center;
 
-      ul.navbar-nav {
+      ul.nav {
         margin: 0;
 
         li {
@@ -159,6 +160,10 @@ header#navbar {
 
           a {
             #pxl-mixins.navigation();
+            &:hover {
+              text-decoration: @link-decoration-hover;
+              background-color: transparent;
+            }
           }
         }
       }
@@ -178,7 +183,7 @@ header#navbar {
         padding-top: 0;
         text-align: left;
 
-        ul.navbar-nav {
+        ul.nav {
           margin: 0;
 
           li {
@@ -187,8 +192,6 @@ header#navbar {
             a {
               &:hover {
                 opacity: 0.6;
-                text-decoration: @link-decoration-hover;
-                background: transparent;
               }
               &.is-active {
                 &:hover {
@@ -196,6 +199,67 @@ header#navbar {
                 }
               }
             }
+          }
+        }
+      }
+    }
+  }
+  #block-sprachumschalter {
+    @media @tablet {
+      display: none;
+    }
+    ul.links {
+      padding: 0;
+      list-style-type: none;
+      text-align: center;
+      li {
+        display: inline;
+
+        a {
+          margin: 0 15px;
+          padding: 15px 0 7.5px;
+          font-family: @font-family-serif;
+          font-size: 15px;
+          //font-weight: 600;
+          color: @pxl-color-main;
+          line-height: 5;
+          letter-spacing: 0.05em;
+          &.is-active {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+          }
+        }
+      }
+    }
+  }
+  #block-sprachumschalter-2 {
+    display: none;
+    position: absolute;
+    padding: 10px 5px;
+    top: 0;
+    right: 0;
+
+    @media @tablet {
+      display: block;
+    }
+
+    ul.links {
+      padding: 0;
+      list-style-type: none;
+      text-align: center;
+      li {
+        display: inline;
+
+        a {
+          margin: 0 10px;
+          padding: 15px 0 5px;
+          font-family: @font-family-serif;
+          font-size: 15px;
+          //font-weight: 600;
+          color: @pxl-color-main;
+          line-height: 1;
+          letter-spacing: 0.05em;
+          &.is-active {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.5);
           }
         }
       }

@@ -14396,6 +14396,7 @@ header#navbar .navbar-collapse[aria-expanded='true'] nav {
 }
 @media screen and (min-width: 48em) {
   header#navbar .navbar-collapse {
+    position: relative;
     height: auto;
     opacity: 1;
   }
@@ -14405,13 +14406,13 @@ header#navbar .navbar-collapse nav {
   padding-top: 50px;
   text-align: center;
 }
-header#navbar .navbar-collapse nav ul.navbar-nav {
+header#navbar .navbar-collapse nav ul.nav {
   margin: 0;
 }
-header#navbar .navbar-collapse nav ul.navbar-nav li {
+header#navbar .navbar-collapse nav ul.nav li {
   float: none;
 }
-header#navbar .navbar-collapse nav ul.navbar-nav li a {
+header#navbar .navbar-collapse nav ul.nav li a {
   padding: 5px 0px;
   font-family: futura-pt, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 15px;
@@ -14421,18 +14422,22 @@ header#navbar .navbar-collapse nav ul.navbar-nav li a {
   text-transform: uppercase;
   letter-spacing: 0.1em;
 }
-header#navbar .navbar-collapse nav ul.navbar-nav li a.is-active {
+header#navbar .navbar-collapse nav ul.nav li a.is-active {
   color: #5dabc7;
   background: none;
 }
-header#navbar .navbar-collapse nav ul.navbar-nav li a:focus,
-header#navbar .navbar-collapse nav ul.navbar-nav li a .active {
+header#navbar .navbar-collapse nav ul.nav li a:focus,
+header#navbar .navbar-collapse nav ul.nav li a .active {
   background-color: transparent;
 }
 @media screen and (min-width: 48em) {
-  header#navbar .navbar-collapse nav ul.navbar-nav li a {
+  header#navbar .navbar-collapse nav ul.nav li a {
     line-height: 1;
   }
+}
+header#navbar .navbar-collapse nav ul.nav li a:hover {
+  text-decoration: none;
+  background-color: transparent;
 }
 @media screen and (min-width: 48em) {
   header#navbar .navbar-collapse {
@@ -14449,20 +14454,75 @@ header#navbar .navbar-collapse nav ul.navbar-nav li a .active {
     padding-top: 0;
     text-align: left;
   }
-  header#navbar .navbar-collapse nav ul.navbar-nav {
+  header#navbar .navbar-collapse nav ul.nav {
     margin: 0;
   }
-  header#navbar .navbar-collapse nav ul.navbar-nav li {
+  header#navbar .navbar-collapse nav ul.nav li {
     float: none;
   }
-  header#navbar .navbar-collapse nav ul.navbar-nav li a:hover {
+  header#navbar .navbar-collapse nav ul.nav li a:hover {
     opacity: 0.6;
-    text-decoration: none;
-    background: transparent;
   }
-  header#navbar .navbar-collapse nav ul.navbar-nav li a.is-active:hover {
+  header#navbar .navbar-collapse nav ul.nav li a.is-active:hover {
     opacity: 1;
   }
+}
+@media screen and (min-width: 48em) {
+  header#navbar #block-sprachumschalter {
+    display: none;
+  }
+}
+header#navbar #block-sprachumschalter ul.links {
+  padding: 0;
+  list-style-type: none;
+  text-align: center;
+}
+header#navbar #block-sprachumschalter ul.links li {
+  display: inline;
+}
+header#navbar #block-sprachumschalter ul.links li a {
+  margin: 0 15px;
+  padding: 15px 0 7.5px;
+  font-family: adobe-garamond-pro, Georgia, "Times New Roman", Times, serif;
+  font-size: 15px;
+  color: #FBF8F4;
+  line-height: 5;
+  letter-spacing: 0.05em;
+}
+header#navbar #block-sprachumschalter ul.links li a.is-active {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+header#navbar #block-sprachumschalter-2 {
+  display: none;
+  position: absolute;
+  padding: 10px 5px;
+  top: 0;
+  right: 0;
+}
+@media screen and (min-width: 48em) {
+  header#navbar #block-sprachumschalter-2 {
+    display: block;
+  }
+}
+header#navbar #block-sprachumschalter-2 ul.links {
+  padding: 0;
+  list-style-type: none;
+  text-align: center;
+}
+header#navbar #block-sprachumschalter-2 ul.links li {
+  display: inline;
+}
+header#navbar #block-sprachumschalter-2 ul.links li a {
+  margin: 0 10px;
+  padding: 15px 0 5px;
+  font-family: adobe-garamond-pro, Georgia, "Times New Roman", Times, serif;
+  font-size: 15px;
+  color: #FBF8F4;
+  line-height: 1;
+  letter-spacing: 0.05em;
+}
+header#navbar #block-sprachumschalter-2 ul.links li a.is-active {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
 header#navbar .header-background {
   height: 50vh;
@@ -14697,18 +14757,69 @@ body .main-container .container-fluid .row section .messages {
 }
 body .main-container .container .row section ul.nav-tabs,
 body .main-container .container-fluid .row section ul.nav-tabs {
-  margin: 20px 0 5px;
-}
-body .main-container .container .row section ul.nav-tabs li,
-body .main-container .container-fluid .row section ul.nav-tabs li {
-  float: right;
+  border: none;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
 }
 body .main-container .container .row section ul.nav-tabs li a,
 body .main-container .container-fluid .row section ul.nav-tabs li a {
-  padding: 5px 10px;
-  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
-  font-size: 17px;
-  border-radius: 0;
+  padding: 5px 0px;
+  font-family: futura-pt, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: #FBF8F4;
+  line-height: 1.6;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin: 10px;
+  padding: 0;
+  color: #8b9997;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 2;
+  border: none;
+}
+body .main-container .container .row section ul.nav-tabs li a.is-active,
+body .main-container .container-fluid .row section ul.nav-tabs li a.is-active {
+  color: #5dabc7;
+  background: none;
+}
+body .main-container .container .row section ul.nav-tabs li a:focus,
+body .main-container .container-fluid .row section ul.nav-tabs li a:focus,
+body .main-container .container .row section ul.nav-tabs li a .active,
+body .main-container .container-fluid .row section ul.nav-tabs li a .active {
+  background-color: transparent;
+}
+@media screen and (min-width: 48em) {
+  body .main-container .container .row section ul.nav-tabs li a,
+  body .main-container .container-fluid .row section ul.nav-tabs li a {
+    line-height: 1;
+  }
+}
+body .main-container .container .row section ul.nav-tabs li a:hover,
+body .main-container .container-fluid .row section ul.nav-tabs li a:hover {
+  border-bottom: 1px solid #8b9997;
+  background-color: transparent;
+}
+@media screen and (min-width: 64em) {
+  body .main-container .container .row section ul.nav-tabs li a,
+  body .main-container .container-fluid .row section ul.nav-tabs li a {
+    margin: 15px;
+    line-height: 2;
+  }
+}
+body .main-container .container .row section ul.nav-tabs li.active a,
+body .main-container .container-fluid .row section ul.nav-tabs li.active a {
+  color: #35739d;
+  background-color: transparent;
+  border-bottom: 1px solid #35739d;
 }
 body .main-container .container .row section ul.action-links,
 body .main-container .container-fluid .row section ul.action-links {
@@ -14811,6 +14922,21 @@ body .main-container .container-fluid .row .region-content .views-element-contai
 body .main-container .container .row .region-content .block-views-blockpressestimmen-block-1,
 body .main-container .container-fluid .row .region-content .block-views-blockpressestimmen-block-1 {
   max-width: none;
+}
+body.user-logged-in .main-container .container .row ul.nav-tabs,
+body.user-logged-in .main-container .container-fluid .row ul.nav-tabs {
+  margin: 20px 0 5px;
+}
+body.user-logged-in .main-container .container .row ul.nav-tabs li,
+body.user-logged-in .main-container .container-fluid .row ul.nav-tabs li {
+  float: right;
+}
+body.user-logged-in .main-container .container .row ul.nav-tabs li a,
+body.user-logged-in .main-container .container-fluid .row ul.nav-tabs li a {
+  padding: 5px 10px;
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-size: 17px;
+  border-radius: 0;
 }
 /*
  *  Footer section
