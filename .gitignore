@@ -23,5 +23,8 @@
 # Ignore .env files as they are personal
 /.env
 
+# Ignore private files
+/private
+
 # Ignore DS_Store
 .DS_Store

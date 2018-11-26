@@ -1,0 +1,13 @@
+diff --git a/core/modules/language/src/Plugin/LanguageNegotiation/LanguageNegotiationUrl.php b/core/modules/language/src/Plugin/LanguageNegotiation/LanguageNegotiationUrl.php
+index 7436a3f3a0..f823aa9037 100644
+--- a/core/modules/language/src/Plugin/LanguageNegotiation/LanguageNegotiationUrl.php
++++ b/core/modules/language/src/Plugin/LanguageNegotiation/LanguageNegotiationUrl.php
+@@ -130,7 +130,7 @@ public function processOutbound($path, &$options = [], Request $request = NULL,
+     }
+     $languages = array_flip(array_keys($this->languageManager->getLanguages()));
+     // Language can be passed as an option, or we go for current URL language.
+-    if (!isset($options['language'])) {
++    if (!isset($options['language']) || $options['language']->getID() === LanguageInterface::LANGCODE_NOT_SPECIFIED) {
+       $language_url = $this->languageManager->getCurrentLanguage(LanguageInterface::TYPE_URL);
+       $options['language'] = $language_url;
+     }
