@@ -2348,6 +2348,8 @@
   overflow: visible;
   clip: auto;
 }
+@pxl-title-font : @font-family-sans-serif
+@pxl-subtitle-font: 'SohoGothicProBold', "Helvetica Neue", Helvetica, Arial, sans-serif;
 /*
  *  Text mixins
  * --------------------------------------------------*/
