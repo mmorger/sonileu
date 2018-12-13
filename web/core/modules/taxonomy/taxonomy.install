@@ -25,6 +25,7 @@ function taxonomy_update_8501() {
  */
 function taxonomy_update_8502(&$sandbox) {
   $database = \Drupal::database();
+  $database->truncate('taxonomy_term__parent')->execute();
 
   if (!isset($sandbox['current'])) {
     // Set batch ops sandbox.

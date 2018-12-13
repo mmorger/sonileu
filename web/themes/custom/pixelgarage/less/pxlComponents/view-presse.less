@@ -13,39 +13,50 @@
 
 // General settings
 // -------------------------
-.block-views-blockpressestimmen-block-1, .views-element-container  {
- //background-color: @pxl-color-grayblue;
 
- .view-pressestimmen {
-  #pxl-mixins.inner-container();
+.view-pressestimmen {
+ #pxl-mixins.inner-container();
 
-  .col-1 {
-   .layout__region--content {
-    //border-top: solid 1px @text-color;
-    .field--name-body {
-     padding-left: 10px;
-     border-left: solid 2px @text-color; //@pxl-color-blue-1;
-     p {
-      display: inline;
-      #pxl-mixins.quote();
-     }
-     @media @normal {
-      padding-left: 40px;
-     }
+ .col-1 {
+  .layout__region--content {
+   //border-top: solid 1px @text-color;
+   .field--name-body {
+    padding-left: 10px;
+    border-left: solid 2px @text-color; //@pxl-color-blue-1;
+    p {
+     display: inline;
+     #pxl-mixins.quote();
 
     }
-    .field--name-field-name {
-     #pxl-mixins.resp-margin-top(25px);
-     //padding-right: 2em;
-     padding-left: 10px;
-     #pxl-mixins.date();
-     //text-align: center;
-     &:before {
-      content: '– ';
-     }
-     @media @normal {
-      padding-left: 40px;
-     }
+    @media @normal {
+     padding-left: 40px;
+    }
+
+   }
+   .field--name-field-name {
+    #pxl-mixins.resp-margin-top(25px);
+    //padding-right: 2em;
+    padding-left: 10px;
+    #pxl-mixins.date();
+    //text-align: center;
+    &:before {
+     content: '– ';
+    }
+    @media @normal {
+     padding-left: 40px;
+    }
+   }
+  }
+ }
+}
+// Smaller Quotes for View Page
+.view-display-id-page_1 {
+ .col-1 {
+  .layout__region--content {
+   .field--name-body {
+    p {
+     #pxl-mixins.font-size-responsive(36px, 30px, 24px);
+
     }
    }
   }
